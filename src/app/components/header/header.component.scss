@@ -46,18 +46,18 @@
                 i.pi {
                     position: relative;
                     top: 50%;
-                    left: 10%;
+                    right: 10%;
                     vertical-align: middle;
                     color: #888;
                 }
 
                 .pesquisa {
-                    padding: 0.6rem 1rem 0.6rem 2.5rem; // espaço à esquerda para o ícone
+                    padding: 0.6rem 2.5rem 0.6rem 1rem; // espaço à esquerda para o ícone
                     border: none;
                     outline: none;
                     background-color: #f5f5f5;
                     border-radius: 4px;
-                    padding-left: 3rem;
+                    padding-right: 3rem;
                 }
             }
         }
