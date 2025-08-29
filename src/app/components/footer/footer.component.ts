@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PrimengModule } from '../../../core/PrimeModule';
+import { PrimengModule } from '../../core/PrimeModule';
 
 @Component({
   selector: 'app-footer',
