@@ -1,0 +1,56 @@
+.footer {
+  min-height: 440px;
+  background-color: black;
+  color: white;
+  padding: 4em 8em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3.5em;
+
+  .colum {
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1;
+    min-width: 200px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 2em;
+
+        h2,
+        h3,
+        p {
+          margin: 0;
+        }
+
+        .pesquisa {
+          padding: 0.5em 1em;
+          border: 1px solid white;
+          border-radius: 4px;
+          background-color: black;
+          color: white;
+          width: 217px;
+        }
+
+        // Cor do ícone da lupa
+        ::ng-deep .pi.pi-send {
+          color: white;
+          vertical-align: middle;
+          position: absolute;
+          top:0%;
+        }
+
+        // Cor do placeholder
+        .pesquisa::placeholder {
+          color: #FAFAFA;
+        }
+        
+      }
+    }
+  }
+}

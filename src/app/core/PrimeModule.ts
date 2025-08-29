@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 
 // Import dos componentes PrimeNG que você usa
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
@@ -22,7 +24,9 @@ import { SplitButtonModule } from 'primeng/splitbutton';
     DropdownModule,
     ToastModule,
     ToolbarModule,
-    SplitButtonModule
+    SplitButtonModule,
+    InputIconModule,
+    IconFieldModule
     // aqui também adicione outros módulos
   ]
 })
