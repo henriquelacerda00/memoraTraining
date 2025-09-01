@@ -63,3 +63,84 @@
         }
     }
 }
+
+/* Media Queries para Responsividade Adaptativa */
+
+/* Tablets (telas com largura até 992px) */
+@media screen and (max-width: 992px) {
+    .card .custom-toolbar {
+        // Permite que os grupos quebrem para a próxima linha
+        flex-wrap: wrap;
+        // Adiciona um espaço entre as linhas quando quebrar
+        row-gap: 1em;
+
+        .p-toolbar-group-center {
+            // Move o menu de navegação para a linha de baixo
+            order: 3;
+            // Faz o menu ocupar a largura total para centralizar corretamente
+            width: 100%;
+            justify-content: center;
+        }
+
+        .p-toolbar-group-start,
+        .p-toolbar-group-end {
+            // Garante que o logo e os ícones da direita ocupem o espaço disponível na primeira linha
+            flex: 1 0 auto;
+        }
+
+        .p-toolbar-group-end {
+            // Alinha os ícones à direita
+            justify-content: flex-end;
+        }
+    }
+}
+
+/* Dispositivos móveis (telas com largura até 768px) */
+@media screen and (max-width: 768px) {
+    .top {
+        // Permite que o conteúdo da barra superior quebre a linha
+        flex-wrap: wrap;
+        text-align: center;
+        // Reduz o tamanho da fonte para caber melhor
+        font-size: 11px;
+        // Ajusta o padding para telas menores
+        padding: 0.5em 1em;
+    }
+
+    .card .custom-toolbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // Em telas muito pequenas, centraliza tudo para um layout mais simples
+        justify-content: center;
+        margin-bottom: 3em;
+
+        h1{
+            margin:  0 auto;
+        }
+
+        .p-toolbar-group-center {
+            // Reduz o espaçamento entre os links do menu
+            gap: 1.5em;
+            font-size: 13px;
+            // Adiciona um padding para separar do conteúdo acima
+            padding-top: 1em;
+            margin-bottom: 1em;
+        }
+
+        .p-toolbar-group-end {
+            // Permite que os ícones e a busca quebrem a linha se necessário
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            
+            .p-input-icon-right {
+                .pesquisa {
+                    // Reduz o tamanho do campo de pesquisa
+                    width: 100%;
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
