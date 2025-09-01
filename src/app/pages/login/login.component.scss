@@ -1,0 +1,93 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    padding: 4em 5em 7em 0;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10vw;
+        max-width: 1305px;
+
+        img {
+            max-width: 805px;
+            max-height: 781px;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: 400px;
+            height: 326px;
+
+            h1 {
+                display: flex;
+                flex-wrap: nowrap;
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 36px;
+            }
+
+            p {
+                margin-bottom: 1.5em;
+            }
+
+            input {
+                border: none;
+                border-bottom: 1px solid #000000;
+            }
+
+            .custom-input-wrapper {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                background-color: transparent;
+            }
+
+            .custom-input-wrapper label {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 6px;
+                color: #000000;
+            }
+
+            .custom-input-wrapper input {
+                padding: 12px 14px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s;
+                border-radius: 0;
+            }
+
+            .custom-input-wrapper input:focus {
+                border-bottom: 1px solid #db4444;
+                /* cor vermelha do botão */
+            }
+
+            .submit-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .login-button ::ng-deep .p-button {
+                    padding: 12px 32px;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    margin-right: 20px;
+                    font-family: 'Poppins';
+                    font-weight: 300;
+                }
+
+                .forget-password {
+                    font-size: 14px;
+                    color: #db4444;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
