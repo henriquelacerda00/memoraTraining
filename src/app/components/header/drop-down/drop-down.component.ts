@@ -11,11 +11,7 @@ import { DropDownItemComponent } from './drop-down-item/drop-down-item.component
   styleUrl: './drop-down.component.scss',
 })
 export class DropDownComponent {
-  constructor(
-    private renderer: Renderer2,
-    private utilsService: UtilsService,
-    private _el: ElementRef
-  ) {}
+  constructor(private renderer: Renderer2, private utilsService: UtilsService, private _el: ElementRef) {}
   @ViewChild('avatarRef', { read: ElementRef })
   avatarRef!: ElementRef<HTMLDivElement>;
 
@@ -40,6 +36,7 @@ export class DropDownComponent {
       this.isDropdownOpen = false;
     }
 
-    this.utilsService.changeStyle(this.isDropdownOpen, this.avatarRef, this.renderer);
+    const avatarEl: HTMLElement = this.avatarRef.nativeElement.firstChild as HTMLElement;
+    this.utilsService.changeStyle(this.isDropdownOpen, avatarEl, this.renderer);
   }
 }

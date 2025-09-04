@@ -7,14 +7,8 @@ import { ElementRef } from '@angular/core';
 export class UtilsService {
   constructor() {}
 
-  changeStyle = (
-    isDropdownOpen: boolean,
-    avatarRef: ElementRef<HTMLDivElement>,
-    renderer: Renderer2
-  ) => {
-    const avatar: HTMLDivElement = avatarRef.nativeElement.firstChild as HTMLDivElement;
-
-    renderer.setStyle(avatar, 'backgroundColor', isDropdownOpen ? 'red' : '');
-    renderer.setStyle(avatar, 'color', isDropdownOpen ? 'white' : '');
+  changeStyle = (isDropdownOpen: boolean, avatarEl: HTMLElement, renderer: Renderer2) => {
+    renderer.setStyle(avatarEl, 'backgroundColor', isDropdownOpen ? 'red' : '');
+    renderer.setStyle(avatarEl, 'color', isDropdownOpen ? 'white' : '');
   };
 }
