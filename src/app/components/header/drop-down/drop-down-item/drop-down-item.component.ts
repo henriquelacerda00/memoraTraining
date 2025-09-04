@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-drop-down-item',
@@ -8,9 +9,17 @@ import { Component, Input } from '@angular/core';
   styleUrl: './drop-down-item.component.scss',
 })
 export class DropDownItemComponent {
+  constructor(private router: Router) {}
   @Input({ required: true }) item!: {
     label: string;
     icon: string;
     route: string;
+  };
+
+  @Output() itemClicked = new EventEmitter<void>();
+
+  navigate = () => {
+    this.itemClicked.emit();
+    this.router.navigate([this.item.route]);
   };
 }

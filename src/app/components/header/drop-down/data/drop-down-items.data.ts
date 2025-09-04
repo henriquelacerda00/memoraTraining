@@ -1,7 +1,7 @@
 import { IdropDownItems } from '../drop-down-items.interface';
 
 export const DROP_DOWN_ITEMS: IdropDownItems[] = [
-  { label: 'Manage My Account', icon: 'pi pi-user', route: '/profile' },
+  { label: 'Manage My Account', icon: 'pi pi-user', route: '/perfil' },
   { label: 'My Orders', icon: 'pi pi-shopping-bag', route: '/profile' },
   {
     label: 'My Cancellations',

@@ -21,7 +21,8 @@
   backdrop-filter: blur(20px);
 
   position: absolute;
-  left: -224px;
+  left: calc(-224px + 32px); // largura do dropdown - tamanho do ícone
+  top: calc(32px + 8px); // tamanho do ícone + espaçamento
   z-index: 1000;
 
   display: flex;
