@@ -1,0 +1,16 @@
+<div class="user-icon" #userIcon>
+  <p-avatar
+    icon="pi pi-user"
+    class="mr-2"
+    shape="circle"
+    #avatarRef
+    (click)="toggleDropdown('avatar')"
+  />
+  @if(isDropdownOpen){
+  <div class="dropdown-menu">
+    @for(item of dropDownItems; track item.label){
+    <app-drop-down-item [item]="item"></app-drop-down-item>
+    }
+  </div>
+  }
+</div>

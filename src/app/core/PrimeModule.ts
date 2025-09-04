@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
+import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DividerModule } from 'primeng/divider';
@@ -11,9 +12,9 @@ import { DropdownModule } from 'primeng/dropdown';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
+import { FloatLabelModule } from 'primeng/floatlabel';
 import { SplitButtonModule } from 'primeng/splitbutton';
-import { FloatLabelModule } from 'primeng/floatlabel'; 
-
+import { AvatarGroupModule } from 'primeng/avatargroup';
 
 // adicione outros módulos conforme sua necessidade
 
@@ -30,7 +31,9 @@ import { FloatLabelModule } from 'primeng/floatlabel';
     InputIconModule,
     IconFieldModule,
     DividerModule,
-    FloatLabelModule
-  ]
+    FloatLabelModule,
+    AvatarModule,
+    AvatarGroupModule,
+  ],
 })
-export class PrimengModule { }
+export class PrimengModule {}
