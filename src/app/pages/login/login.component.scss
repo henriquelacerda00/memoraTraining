@@ -1,13 +1,13 @@
 .login {
     display: flex;
     flex-direction: column;
-    padding: 4em 5em 7em 0;
+    justify-content: center;
+    padding: 4em 3em 4em 0em;
 
     .container {
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        gap: 10vw;
+        justify-content: space-between;
         max-width: 1305px;
 
         img {
@@ -95,18 +95,47 @@
 /* === Media Queries para Responsividade === */
 
 /* Tablets (telas com largura máxima de 992px) */
+@media screen and (max-width: 1280px) {
+    .login {
+        padding: 3em 2em; /* Reduz o padding geral */
+
+        .container {
+            display: flex; /* Empilha a imagem e o formulário */
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            gap: 3em;
+            text-align: center;
+
+            img {
+                max-width: 50%; /* Reduz o tamanho da imagem */
+                height: auto;
+                order: 2; /* Coloca a imagem depois do formulário, se preferir */
+            }
+
+            .formulario {
+                order: 1; /* Coloca o formulário antes da imagem */
+                max-width: 500px;
+                height: auto; /* Permite que a altura se ajuste ao conteúdo */
+
+                h1 {
+                    justify-content: center; /* Centraliza o título */
+                }
+            }
+        }
+    }
+}
 @media screen and (max-width: 992px) {
     .login {
         padding: 3em 2em; /* Reduz o padding geral */
 
         .container {
-            flex-direction: column; /* Empilha a imagem e o formulário */
+             /* Empilha a imagem e o formulário */
             justify-content: center;
             gap: 3em;
             text-align: center;
 
             img {
-                max-width: 70%; /* Reduz o tamanho da imagem */
+                max-width: 50%; /* Reduz o tamanho da imagem */
                 height: auto;
                 order: 2; /* Coloca a imagem depois do formulário, se preferir */
             }
@@ -128,7 +157,7 @@
 @media screen and (max-width: 576px) {
     .login {
         padding: 2em 1em; /* Padding mínimo para telas pequenas */
-
+        margin: 4em 0;
         .container {
             img {
                 display: none; /* Oculta a imagem para focar no formulário */
@@ -140,8 +169,14 @@
                 }
 
                 .submit-wrapper {
+                    display: flex;
+                    align-items: center;
                     flex-direction: column; /* Empilha o botão e o link */
                     gap: 1.5em;
+                    .login-button ::ng-deep .p-button {
+                        margin-right: 0;
+                    }
+                
                 }
             }
         }
