@@ -56,27 +56,26 @@
         .card {
             font-family: 'Poppins';
 
-            p-card {
-                
+            ::ng-deep p-card .p-card {
+                padding: 2em 4em;
+            }
+
+            .responsive-card {
+                width: 870px;
+                padding: 2em 4em;
+                margin: auto;
+
+                ::ng-deep p-card {
+                    width: 100%;
+                    display: block;
+                }
+
                 h2 {
                     color: #DB4444;
                     font-family: 'Poppins';
                     font-size: 20px;
                     font-weight: 400;
                     margin-bottom: 1em;
-                }
-
-                .campo {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1em;
-
-                    label {
-                        font-family: 'Poppins';
-                        font-size: 16px;
-                        font-weight: 400;
-                        color: #000000;
-                    }
                 }
             }
 
@@ -113,28 +112,128 @@
                     justify-content: flex-end;
                     gap: 1rem;
                     margin: 1rem 0;
-                    
 
-                    button{
+                    button {
                         padding: 1em 2em;
                         font-family: 'Poppins';
-                        
                     }
                 }
             }
+        }
+    }
 
-            @media (max-width: 768px) {
-                .profile-form {
-                    grid-template-columns: 1fr;
+    /* === Media Queries para Responsividade === */
 
-                    .full-width {
-                        grid-column: span 1;
-                    }
+    @media screen and (max-width: 992px) {
+        padding: 1.5em;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
 
-                    .actions {
-                        flex-direction: column;
-                        align-items: stretch;
-                    }
+        .lateral {
+            width: 100%;
+            max-width: 870px;
+            align-items: center;
+            text-align: center;
+            gap: 2em;
+        }
+
+        ::ng-deep p-card .p-card {
+            padding: 3em 4em;
+            max-width: 680px;
+            height: auto;
+            min-width: 650px;
+        }
+
+        .card-container {
+            width: 100%;
+            align-items: center;
+
+            .welcome p {
+                text-align: center;
+            }
+
+            .campo {
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    font-weight: 600;
+                    font-family: 'Poppins';
+                    font-size: 12px;
+                    margin-bottom: 0.5rem;
+                }
+
+                input {
+                    font-family: 'Poppins';
+                    font-size: 14px;
+                }
+            }
+
+            
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        ::ng-deep p-card .p-card {
+            padding: 2em 4em;
+            max-width: 520px;
+            height: auto;
+            margin: 0 auto;;
+        }
+
+        .responsive-card{
+            max-width: 520px;
+            padding: 0;
+        }
+        .card-container .card .profile-form {
+            grid-template-columns: 1fr;
+
+
+            .full-width {
+                grid-column: span 1;
+            }
+
+            .actions {
+                flex-direction: column;
+                align-items: center;
+
+                button{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .lateral {
+            display: none;
+        }
+
+        ::ng-deep p-card .p-card {
+            max-width: 520px;
+            min-width: 345px;
+            height: auto;
+            justify-self: center;
+        }
+
+
+        .card-container .welcome {
+            display: none;
+        }
+
+        .card-container .responsive-card {
+            width: 100%;
+            padding: 1em;
+        }
+
+        .card-container .card .profile-form {
+            .actions {
+                flex-direction: column;
+                align-items: center;
+
+                button{
+                    text-align: center;
                 }
             }
         }

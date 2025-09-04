@@ -18,8 +18,10 @@ inputStyle = {
   width: '100%',
   padding: '0.7em',
   background: '#F5F5F5',
-  border: 'none'
+  border: 'none',
 };
+
+
 
 firstName:any
 lastName:any
