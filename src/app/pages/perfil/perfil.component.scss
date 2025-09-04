@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    .lateral {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+
+        .nav {
+            a {
+                text-decoration: none;
+                font-family: 'Poppins';
+                font-size: 14px;
+            }
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            label {
+                font-family: 'Poppins';
+                font-size: 16px;
+                font-weight: 600;
+                color: #000000;
+            }
+
+            ul {
+                font-family: 'Poppins';
+                font-size: 16px;
+                list-style: none;
+
+                li {
+                    display: flex;
+                    margin-left: 15%;
+                    color: rgb(134, 132, 132);
+                }
+            }
+        }
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+
+        .welcome {
+            margin-bottom: 2em;
+
+            p {
+                text-align: end;
+            }
+        }
+
+        .card {
+            font-family: 'Poppins';
+
+            p-card {
+                
+                h2 {
+                    color: #DB4444;
+                    font-family: 'Poppins';
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-bottom: 1em;
+                }
+
+                .campo {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    label {
+                        font-family: 'Poppins';
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #000000;
+                    }
+                }
+            }
+
+            .profile-form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                width: 100%;
+                max-width: 870px;
+
+                .campo {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-weight: 600;
+                        font-family: 'Poppins';
+                        font-size: 14px;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    input {
+                        font-family: 'Poppins';
+                        font-size: 14px;
+                    }
+                }
+
+                .full-width {
+                    grid-column: span 2;
+                }
+
+                .actions {
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 1rem;
+                    margin: 1rem 0;
+                    
+
+                    button{
+                        padding: 1em 2em;
+                        font-family: 'Poppins';
+                        
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+                .profile-form {
+                    grid-template-columns: 1fr;
+
+                    .full-width {
+                        grid-column: span 1;
+                    }
+
+                    .actions {
+                        flex-direction: column;
+                        align-items: stretch;
+                    }
+                }
+            }
+        }
+    }
+}

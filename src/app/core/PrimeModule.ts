@@ -12,7 +12,7 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { SplitButtonModule } from 'primeng/splitbutton';
-
+import { FloatLabelModule } from 'primeng/floatlabel'; 
 
 
 // adicione outros módulos conforme sua necessidade
@@ -29,8 +29,8 @@ import { SplitButtonModule } from 'primeng/splitbutton';
     SplitButtonModule,
     InputIconModule,
     IconFieldModule,
-    DividerModule
-    // aqui também adicione outros módulos
+    DividerModule,
+    FloatLabelModule
   ]
 })
 export class PrimengModule { }

@@ -1,0 +1,80 @@
+<app-container>
+    <div class="container">
+
+        <div class="lateral">
+            <div class="nav">
+                <a>Home</a>
+                /
+                <a>My Account</a>
+            </div>
+            <div class="list">
+                <label>Manage My Account</label>
+                <ul>
+                    <li>My Profile</li>
+                    <li>Address Book</li>
+                    <li>My Payment Options</li>
+                </ul>
+                <label>My Orders</label>
+                <ul>
+                    <li>My Returns</li>
+                    <li>My Cancellations</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="welcome">
+                <p>Welcome! usuario</p>
+            </div>
+            <div class="card">
+                <p-card [style]="{width: '870px' , height: 'auto' , padding: '2em 4em' ,}">
+                    <h2>Edit Your Profile</h2>
+                    <form class="profile-form">
+                        <div class="campo">
+                            <label for="firstName">First Name</label>
+                            <input pInputText id="firstName" [(ngModel)]="firstName" [style]="inputStyle" name="firstName"/>
+                        </div>
+
+                        <div class="campo">
+                            <label for="lastName">Last Name</label>
+                            <input pInputText id="lastName" [(ngModel)]="lastName" [style]="inputStyle" name="lastName" />
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Email</label>
+                            <input pInputText id="email" [(ngModel)]="email" [style]="inputStyle" name="email" />
+                        </div>
+
+                        <div class="campo">
+                            <label for="address">Address</label>
+                            <input pInputText id="address" [(ngModel)]="address" [style]="inputStyle" name="address" />
+                        </div>
+
+                        <div class="campo full-width">
+                            <label for="currentPassword">Current Password</label>
+                            <input pInputText id="currentPassword" type="password" [(ngModel)]="currentPassword"
+                                [style]="inputStyle" name="currentPassword"/>
+                        </div>
+
+                        <div class="campo full-width">
+                            <label for="newPassword">New Password</label>
+                            <input pInputText id="newPassword" type="password" [(ngModel)]="newPassword"
+                                [style]="inputStyle" name="newPassword"/>
+                        </div>
+
+                        <div class="campo full-width">
+                            <label for="confirmPassword">Confirm New Password</label>
+                            <input pInputText id="confirmPassword" type="password" [(ngModel)]="confirmPassword"
+                                [style]="inputStyle" name="confirmPassword"/>
+                        </div>
+
+                        <div class="actions full-width">
+                            <button type="button" class="p-button p-button-text">Cancel</button>
+                            <button type="submit" class="p-button p-button-danger">Save Changes</button>
+                        </div>
+                    </form>
+
+                </p-card>
+            </div>
+        </div>
+    </div>
+</app-container>
