@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DividerModule } from 'primeng/divider';
 import { DropdownModule } from 'primeng/dropdown';
+import { CarouselModule } from 'primeng/carousel';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
@@ -34,6 +35,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     FloatLabelModule,
     AvatarModule,
     AvatarGroupModule,
+    CarouselModule,
   ],
 })
 export class PrimengModule {}
