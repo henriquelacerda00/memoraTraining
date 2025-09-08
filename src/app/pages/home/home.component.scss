@@ -7,6 +7,7 @@
   height: calc(100vh - 142px);
   display: flex;
   justify-content: center;
+  padding: 2em 0;
 }
 
 :host ::ng-deep .p-rating .p-rating-icon {
@@ -16,5 +17,4 @@
 :host ::ng-deep .p-rating .star-partial {
   stroke: gold;
   stroke-width: 1px;
-  // fill: url(#starPartialFill);
 }
