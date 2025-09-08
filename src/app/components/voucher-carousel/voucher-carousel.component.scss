@@ -1,0 +1,121 @@
+:host {
+  max-width: 892px;
+  height: 100%;
+  max-height: 344px;
+}
+
+:host ::ng-deep p-carousel {
+  position: relative;
+  display: block;
+  max-width: 892px;
+  height: 100%;
+  max-height: 344px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-height: 344px;
+  }
+
+  .negative-pos {
+    bottom: 47px;
+    left: 67px;
+    width: 113px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+  }
+}
+
+:host ::ng-deep .p-carousel-indicators {
+  height: 30px;
+  align-items: center;
+  gap: 11px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 11px;
+
+  .p-link {
+    background-color: grey;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+  }
+  .p-highlight .p-link {
+    background-color: #db4444;
+    border: 2px solid white;
+  }
+}
+
+@media (max-width: 850px) {
+  :host {
+    max-width: 95%;
+    height: auto;
+    max-height: none;
+  }
+
+  :host ::ng-deep .card {
+    display: flex;
+    justify-content: center;
+  }
+
+  :host ::ng-deep p-carousel {
+    max-width: 95%;
+    height: auto;
+    max-height: none;
+
+    img {
+      max-height: none;
+      height: auto;
+    }
+
+    .negative-pos {
+      bottom: 12px;
+      left: 12px;
+      width: 100px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      i {
+        font-size: 12px;
+      }
+
+      span {
+        font-size: 12px;
+        line-height: 20px;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+    }
+  }
+
+  :host ::ng-deep .p-carousel-indicators {
+    bottom: 24px;
+
+    .p-link {
+      background-color: grey;
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+    }
+    .p-highlight .p-link {
+      background-color: #db4444;
+      border: 2px solid white;
+    }
+  }
+}

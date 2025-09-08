@@ -6,9 +6,11 @@ import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
+import { RatingModule } from 'primeng/rating';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DividerModule } from 'primeng/divider';
 import { DropdownModule } from 'primeng/dropdown';
+import { CarouselModule } from 'primeng/carousel';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
@@ -16,8 +18,6 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { AvatarGroupModule } from 'primeng/avatargroup';
-import { CarouselModule } from 'primeng/carousel';
-import { RatingModule } from 'primeng/rating';
 
 // adicione outros módulos conforme sua necessidade
 
