@@ -27,7 +27,6 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     const stars = this.elementRef.nativeElement.querySelectorAll('.p-rating-icon-active');
-    console.log(stars);
 
     if (this.value % 1 !== 0 && typeof document !== 'undefined') {
       const svgNS = 'http://www.w3.org/2000/svg';
