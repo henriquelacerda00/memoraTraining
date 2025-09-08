@@ -1,16 +1,42 @@
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev,
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next {
+    position: absolute;
+    top: 0;
+    background-color: #F5F5F5;
+    padding: 1.2em;
+}
+::ng-deep .p-carousel .p-carousel-content .p-carousel-next{
+    right: 2em;
+
+}
+::ng-deep .p-carousel .p-carousel-content .p-carousel-prev{
+    right: 5em;
+
+}
+
+.title-carrossel{
+        font-size: 36px;
+        font-family: 'Inter';
+        margin-left: 3em;
+    }
+
 .app-carrossel {
+    display: block;
     padding: 1em;
+    position: relative;
 
-    ::ng-deep .title-container{
+    ::ng-deep .title-container {
         max-height: 30px;
-        
+
     }
 
-    ::ng-deep .price-custom{
-        color:#DB4444;
+    
+
+    ::ng-deep .price-custom {
+        color: #DB4444;
     }
 
-    ::ng-deep .p-carousel-indicators{
+    ::ng-deep .p-carousel-indicators {
         display: none;
     }
 
@@ -62,5 +88,5 @@
         display: block;
     }
 
-    
+
 }

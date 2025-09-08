@@ -1,7 +1,8 @@
+<h2 class="title-carrossel">{{ categoria }}</h2>
 <p-carousel class="app-carrossel"
     [value]="products ?? []" 
-    [numVisible]="5" 
-    [numScroll]="5" 
+    [numVisible]="4" 
+    [numScroll]="4" 
     [responsiveOptions]="responsiveOptions">
         <ng-template let-product pTemplate="item">
             <div class="card">
