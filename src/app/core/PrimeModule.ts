@@ -6,6 +6,7 @@ import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { AvatarModule } from 'primeng/avatar';
 import { ButtonModule } from 'primeng/button';
+import { RatingModule } from 'primeng/rating';
 import { ToolbarModule } from 'primeng/toolbar';
 import { DividerModule } from 'primeng/divider';
 import { DropdownModule } from 'primeng/dropdown';
@@ -36,6 +37,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     AvatarModule,
     AvatarGroupModule,
     CarouselModule,
+    RatingModule,
   ],
 })
 export class PrimengModule {}
