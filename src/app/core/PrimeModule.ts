@@ -13,6 +13,7 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { TieredMenuModule } from 'primeng/tieredmenu';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 
@@ -34,6 +35,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     FloatLabelModule,
     AvatarModule,
     AvatarGroupModule,
+    TieredMenuModule,
   ],
 })
 export class PrimengModule {}
