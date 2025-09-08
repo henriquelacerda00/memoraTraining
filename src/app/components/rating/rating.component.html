@@ -1,11 +1,1 @@
-<ng-container *ngFor="let i of [1,2,3,4,5]; let idx = index">
-  <i 
-    class="pi" 
-    [ngClass]="{
-      'pi-star-fill': idx + 1 <= Math.floor(value),
-      'pi-star-half-fill': idx < value && idx + 1 > value,
-      'pi-star-o': idx + 1 > value && !(idx < value && idx + 1 > value)
-    }"
-    style="color: #f5b301; margin-right: 2px;">
-  </i>
-</ng-container>
+<p-rating [stars]="5" color="gold" [(ngModel)]="value" [cancel]="false" [readonly]="true" #rating></p-rating>
