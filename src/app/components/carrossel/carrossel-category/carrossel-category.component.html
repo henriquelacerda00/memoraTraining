@@ -1,0 +1,25 @@
+<section class="category-carousel">
+  <h2 class="carousel-title">Browse By Category</h2>
+
+  <p-carousel
+    [value]="categorias"
+    [numVisible]="5"
+    [numScroll]="1"
+    [circular]="true"
+    [autoplayInterval]="0"
+    [responsiveOptions]="responsiveOptions"
+    [showNavigators]="false"
+    class="category-carousel-container">
+
+    <ng-template let-categoria pTemplate="item">
+      <div class="category-card">
+        <img
+          [src]="'assets/categoria-' + categoria.toLowerCase() + '.png'"
+          [alt]="categoria"
+          class="category-icon" />
+        <div class="category-name">{{ categoria }}</div>
+      </div>
+    </ng-template>
+
+  </p-carousel>
+</section>
