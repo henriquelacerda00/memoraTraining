@@ -1,0 +1,29 @@
+<p-carousel class="app-carrossel"
+    [value]="products ?? []" 
+    [numVisible]="5" 
+    [numScroll]="1" 
+    [responsiveOptions]="responsiveOptions">
+        <ng-template let-product pTemplate="item">
+            <div class="card">
+                <div class="mb-3">
+                    <div class="relative mx-auto">
+                        <img 
+                            src="{{ product.image }}" 
+                            [alt]="product.title" 
+                            class="w-full border-round" />
+                    </div>
+                </div>
+                <div class="title-container">
+                    {{ product.title | slice:0:30 }}
+                </div>
+                <div class="actions">
+                    <div class="price-custom">
+                        {{ '$' + product.price }}
+                    </div>
+                    <span>
+                        <app-rating [value]="product.rating.rate"></app-rating>
+                    </span>
+                </div>
+            </div>
+        </ng-template>
+</p-carousel>
