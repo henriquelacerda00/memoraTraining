@@ -13,11 +13,11 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
+import { TieredMenuModule } from 'primeng/tieredmenu';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { CarouselModule } from 'primeng/carousel';
 import { RatingModule } from 'primeng/rating';
-
 
 // adicione outros módulos conforme sua necessidade
 
@@ -39,6 +39,7 @@ import { RatingModule } from 'primeng/rating';
     AvatarGroupModule,
     CarouselModule,
     RatingModule,
+    TieredMenuModule,
   ],
 })
 export class PrimengModule {}
