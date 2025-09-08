@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PrimengModule } from '../../core/PrimeModule';
 import { ProductService } from '../../pages/home/service/product.service';
 import { CommonModule } from '@angular/common';
@@ -28,6 +28,7 @@ export interface Product {
   host: { ngSkipHydration: 'true' },
 })
 export class CarrosselComponent {
+  @Input()categoria! : string;
   products: Product[] | undefined;
 
   rateValue = 4.5;
