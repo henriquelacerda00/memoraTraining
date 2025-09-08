@@ -13,18 +13,19 @@ import { FormsModule } from '@angular/forms';
 export class HomeComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
-  value = 2.6;
+  value = 4.6;
 
   ngAfterViewInit() {
     const stars = this.elementRef.nativeElement.querySelectorAll('.p-rating-icon-active');
+    console.log(stars);
 
-    if (stars.length < 5) {
+    if (this.value % 1 !== 0 && typeof document !== 'undefined') {
       const svgNS = 'http://www.w3.org/2000/svg';
       const gradient = document.createElementNS(svgNS, 'linearGradient');
       gradient.setAttribute('id', 'starPartialFill');
       gradient.setAttribute('x1', '0%');
-      gradient.setAttribute('x2', '100%');
-      gradient.setAttribute('y1', '0%');
+      gradient.setAttribute('x2', '0%');
+      gradient.setAttribute('y1', '100%');
       gradient.setAttribute('y2', '0%');
 
       // Define os stops do gradiente conforme a porcentagem
