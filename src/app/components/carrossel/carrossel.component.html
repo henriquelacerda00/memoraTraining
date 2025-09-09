@@ -2,7 +2,8 @@
 <p-carousel class="app-carrossel"
     [value]="products ?? []" 
     [numVisible]="4" 
-    [numScroll]="4" 
+    [numScroll]="4"
+    circular="true" 
     [responsiveOptions]="responsiveOptions">
         <ng-template let-product pTemplate="item">
             <div class="card">
