@@ -1,0 +1,190 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em 8em 4em 0em;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+
+        img {
+            max-width: 805px;
+            max-height: 781px;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: 400px;
+            height: 326px;
+
+            h1 {
+                display: flex;
+                flex-wrap: nowrap;
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 36px;
+            }
+
+            p {
+                margin-bottom: 1.5em;
+            }
+
+            input {
+                border: none;
+                border-bottom: 1px solid #000000;
+            }
+
+            .custom-input-wrapper {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                background-color: transparent;
+            }
+
+            .custom-input-wrapper label {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 6px;
+                color: #000000;
+            }
+
+            .custom-input-wrapper input {
+                padding: 12px 14px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s;
+                border-radius: 0;
+            }
+
+            .custom-input-wrapper input:focus {
+                border-bottom: 1px solid #db4444;
+                /* cor vermelha do botão */
+            }
+
+            .submit-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                .login-button ::ng-deep .p-button {
+                    padding: 12px 32px;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    margin-right: 20px;
+                    font-family: 'Poppins';
+                    font-weight: 300;
+                }
+
+                .forget-password {
+                    font-size: 14px;
+                    color: #db4444;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* === Media Queries para Responsividade === */
+
+/* Tablets (telas com largura máxima de 992px) */
+@media screen and (min-width: 1600px) {
+    .login {
+        
+
+        .container {
+            display: flex; /* Empilha a imagem e o formulário */
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            gap: 3em;
+            text-align: center;
+            width: 100%;
+            img {
+                max-width: 50%; /* Reduz o tamanho da imagem */
+                height: auto;
+                order: 2; /* Coloca a imagem depois do formulário, se preferir */
+            }
+
+            .formulario {
+                order: 1; /* Coloca o formulário antes da imagem */
+                max-width: 500px;
+                height: auto; /* Permite que a altura se ajuste ao conteúdo */
+                margin: 0 auto;
+                h1 {
+                    justify-content: center; /* Centraliza o título */
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    .login {
+        padding: 3em 3em; /* Reduz o padding geral */
+
+        .container {
+             /* Empilha a imagem e o formulário */
+             display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            gap: 3em;
+            text-align: center;
+
+            img {
+                max-width: 50%; /* Reduz o tamanho da imagem */
+                height: auto;
+                order: 2; /* Coloca a imagem depois do formulário, se preferir */
+            }
+
+            .formulario {
+                order: 1; /* Coloca o formulário antes da imagem */
+                max-width: 500px;
+                height: auto; /* Permite que a altura se ajuste ao conteúdo */
+
+                h1 {
+                    justify-content: center; /* Centraliza o título */
+                }
+            }
+        }
+    }
+}
+
+/* Celulares (telas com largura máxima de 576px) */
+@media screen and (max-width: 576px) {
+    .login {
+        padding: 2em 1em; /* Padding mínimo para telas pequenas */
+        margin: 4em 0;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                display: none; /* Oculta a imagem para focar no formulário */
+            }
+
+            .formulario {
+                h1 {
+                    font-size: 28px; /* Reduz o tamanho da fonte do título */
+                }
+
+                .submit-wrapper {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column; /* Empilha o botão e o link */
+                    gap: 1.5em;
+                    .login-button ::ng-deep .p-button {
+                        margin-right: 0;
+                    }
+                
+                }
+            }
+        }
+    }
+}

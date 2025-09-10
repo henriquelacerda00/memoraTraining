@@ -1,0 +1,36 @@
+.category-carousel {
+    padding: 2em 3em;
+
+    ::ng-deep .p-carousel .p-carousel-indicators {
+        display: none;
+    }
+
+    h2{
+        font-size: 36px;
+        font-family: 'Inter';
+        margin-bottom: 1em;
+    }
+}
+
+
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgray;
+    margin: 25px;
+    padding: 1.5em;
+    text-align: center;
+    gap: 15px;
+
+    img {
+        width: 50px;
+        margin: 0 auto;
+    }
+}
+
+.category-card:hover{
+   transition: 0.2s;
+   transform: scale(1.08);
+   background-color: rgb(224, 224, 224);
+}

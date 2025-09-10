@@ -1,0 +1,18 @@
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 12px;
+  margin-left: 12px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__label {
+    font-family: var(--font-secundaria);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+}

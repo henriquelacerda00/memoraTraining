@@ -1,0 +1,24 @@
+<div class="card">
+  <p-carousel
+    [value]="products"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    autoplayInterval="3000"
+    [showNavigators]="false"
+  >
+    <ng-template let-product pTemplate="item">
+      <div class="border border-surface-200 dark:border-surface-700 rounded">
+        <div class="mb-4">
+          <div class="relative mx-auto">
+            <img src="{{ product.image }}" [alt]="product.title" class="rounded-border" />
+            <div class="absolute negative-pos">
+              <span class="text-white font-bold rounded">Shop Now</span>
+              <i class="pi pi-arrow-right text-white ml-2"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

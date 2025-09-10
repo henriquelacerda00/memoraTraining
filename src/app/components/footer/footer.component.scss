@@ -1,0 +1,109 @@
+.footer {
+  min-height: 440px;
+  background-color: black;
+  color: white;
+  padding: 4em 8em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3.5em;
+
+  .colum {
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1;
+    min-width: 200px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 2em;
+
+        h2,
+        h3,
+        p {
+          margin: 0;
+        }
+
+        .pesquisa {
+          padding: 0.5em 1em;
+          border: 1px solid white;
+          border-radius: 4px;
+          background-color: black;
+          color: white;
+          width: 217px;
+        }
+
+        // Cor do ícone da lupa
+        ::ng-deep .pi.pi-send {
+          color: white;
+          vertical-align: middle;
+          position: absolute;
+          top:0%;
+        }
+
+        // Cor do placeholder
+        .pesquisa::placeholder {
+          color: #FAFAFA;
+        }
+
+        .container{
+          display: flex;
+          align-items: center;
+          gap: 1em;
+        }
+
+        .links{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 2em !important;
+          ul.links-list{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            gap: 1.5em;
+          
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/* === Media Queries para Responsividade === */
+
+/* Tablets (telas com largura máxima de 992px) */
+@media screen and (max-width: 992px) {
+  .footer {
+    padding: 3em 4em; /* Reduz o padding lateral */
+    gap: 2.5em; /* Reduz o espaçamento entre as colunas */
+  }
+}
+
+/* Dispositivos móveis (telas com largura máxima de 768px) */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2.5em 1.5em; /* Padding mínimo para telas pequenas */
+    justify-content: center; /* Centraliza as colunas quando empilhadas */
+    text-align: center; /* Centraliza o texto dentro das colunas */
+
+    .colum {
+      align-items: center; /* Centraliza o conteúdo da coluna (como o input) */
+
+      ul li {
+        .pesquisa {
+          width: 100%; /* O campo de pesquisa ocupa a largura total */
+        }
+
+        .links {
+          justify-content: center; /* Centraliza os ícones de redes sociais */
+        }
+      }
+    }
+  }
+}

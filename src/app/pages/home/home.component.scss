@@ -1,0 +1,33 @@
+.homePage {
+  min-height: 50vh;
+  padding: 2em 5em;
+
+  
+}
+
+.home__container {
+  height: calc(100vh - 142px);
+  display: flex;
+  justify-content: center;
+}
+
+:host ::ng-deep .p-rating .p-rating-icon {
+  color: gold;
+}
+
+:host ::ng-deep .p-rating .star-partial {
+  stroke: gold;
+  stroke-width: 1px;
+  // fill: url(#starPartialFill);
+}
+
+:host ::ng-deep #viewAllProducts button {
+  display: flex;
+  justify-content: center;
+  padding: 1em 1.5em;
+  font-family: 'Poppins';
+  align-items: center;
+  margin: 0 auto;
+  font-weight: 300;
+  margin-bottom:4em;
+}
