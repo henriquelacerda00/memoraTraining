@@ -1,1 +1,12 @@
-<p-rating [stars]="5" color="gold" [(ngModel)]="value" [cancel]="false" [readonly]="true" #rating></p-rating>
+<div class="rating__container">
+  <p-rating [stars]="5" color="gold" [(ngModel)]="value" [cancel]="false" [readonly]="true" #rating></p-rating>
+  <ng-content *ngTemplateOutlet="reviews ? reviewTemplate : elseTemplate"></ng-content>
+</div>
+
+<ng-template #reviewTemplate>
+  <span class="rating__count">({{ count }} Reviews)</span>
+</ng-template>
+
+<ng-template #elseTemplate>
+  <span class="rating__count">({{ count }})</span>
+</ng-template>

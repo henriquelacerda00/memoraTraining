@@ -12,7 +12,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class RatingComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
-  @Input() value: number = 0;
+  @Input({ required: true }) value: number = 0;
+  @Input({ required: true }) count: number = 0;
+  @Input() reviews: boolean = false;
 
   ngAfterViewInit() {
     setTimeout(() => {
