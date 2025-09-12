@@ -37,6 +37,11 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe((data) => {
+      if (!data['product']) {
+        this.router.navigate(['/not-found']);
+        return;
+      }
+
       this.product = data['product'];
       this.images = [
         {
@@ -56,10 +61,6 @@ export class ProductComponent implements OnInit {
           thumbnailImageSrc: data['product'].image,
         },
       ];
-
-      if (!this.product) {
-        this.router.navigate(['/not-found']);
-      }
     });
   }
 
