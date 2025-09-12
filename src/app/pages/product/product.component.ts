@@ -7,11 +7,12 @@ import { PrimengModule } from '../../core/PrimeModule';
 import { FormBuilder, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RatingComponent } from '../../components/rating/rating.component';
+import { CarrosselComponent } from '../../components/carrossel/carrossel.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [PrimengModule, FormsModule, CommonModule, RatingComponent, ReactiveFormsModule],
+  imports: [PrimengModule, FormsModule, CommonModule, RatingComponent, ReactiveFormsModule, CarrosselComponent],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss',
 })
@@ -26,6 +27,13 @@ export class ProductComponent implements OnInit {
   }
   product!: IProduct;
   images: any[] = [];
+  sizes = [
+    { label: 'XS', value: 'XS' },
+    { label: 'S', value: 'S' },
+    { label: 'M', value: 'M' },
+    { label: 'L', value: 'L' },
+    { label: 'XL', value: 'XL' },
+  ];
 
   ngOnInit() {
     this.route.data.subscribe((data) => {
@@ -56,10 +64,12 @@ export class ProductComponent implements OnInit {
   }
 
   isInvalid(form: FormGroup): boolean {
-    return !this.productForm.value.color && form.invalid;
+    return form.invalid;
   }
 
   submitForm() {
-    console.log(this.productForm.value);
+    if (this.productForm.valid) {
+      console.log(this.productForm.value);
+    }
   }
 }

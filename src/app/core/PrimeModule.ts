@@ -17,9 +17,11 @@ import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { InputNumberModule } from 'primeng/inputnumber';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 // adicione outros módulos conforme sua necessidade
 
@@ -44,6 +46,8 @@ import { RadioButtonModule } from 'primeng/radiobutton';
     TieredMenuModule,
     GalleriaModule,
     RadioButtonModule,
+    SelectButtonModule,
+    InputNumberModule,
   ],
 })
 export class PrimengModule {}
