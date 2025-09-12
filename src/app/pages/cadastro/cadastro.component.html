@@ -1,0 +1,47 @@
+<section class="cadastro">
+    <div class="container">
+        <img src="assets/login.png" alt="">
+        <form class="formulario" [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+            <h1>Create an account</h1>
+            <p>Enter your details below</p>
+            <div class="custom-input-wrapper">
+                <input id="nome" type="text" pInputText placeholder="Name" formControlName="nome" />
+                <p-message severity="error" text="Name is required"
+                    *ngIf="cadastroForm.get('nome')?.invalid && cadastroForm.get('nome')?.touched" @fadeSlide>
+                </p-message>
+            </div>
+            <div class="custom-input-wrapper">
+                <input id="email" type="text" pInputText placeholder="Email" formControlName="email" />
+                <p-message severity="error" text="Enter a valid email"
+                    *ngIf="cadastroForm.get('email')?.invalid && cadastroForm.get('email')?.touched" @fadeSlide>
+                </p-message>
+            </div>
+
+            <div class="custom-input-wrapper">
+                <input id="senha" type="password" pInputText placeholder="Senha" formControlName="senha" />
+                <p-message severity="error" text="Mínimo 6 caracteres"
+                    *ngIf="cadastroForm.get('senha')?.invalid && cadastroForm.get('senha')?.touched" @fadeSlide>
+                </p-message>
+            </div>
+            <div class="submit-wrapper">
+                <div class="buttons-container">
+                    <p-button type="submit" label="Create Account" severity="danger" class="cadastro-button"
+                        [disabled]="cadastroForm.invalid">
+                    </p-button>
+                    <p-button [outlined]="true" severity="secondary" class="google-button">
+                        <ng-template pTemplate="content">
+                            <span class="google-button-content">
+                                <img src="assets/google-icon.svg" alt="Google" class="google-icon" />
+                                <span>Sign up with Google</span>
+                            </span>
+                        </ng-template>
+                    </p-button>
+                </div>
+                <div class="links-container">
+                    <p class="forget-password">Already have an account?</p>
+                    <a routerLink="/login" class="link">Log in</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

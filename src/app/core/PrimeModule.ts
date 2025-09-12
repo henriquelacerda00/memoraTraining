@@ -18,6 +18,7 @@ import { FloatLabelModule } from 'primeng/floatlabel';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { MessageModule } from 'primeng/message';
 
 // adicione outros módulos conforme sua necessidade
 
@@ -40,6 +41,7 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     CarouselModule,
     RatingModule,
     TieredMenuModule,
+    MessageModule
   ],
 })
 export class PrimengModule {}

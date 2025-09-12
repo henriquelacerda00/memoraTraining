@@ -1,0 +1,303 @@
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em 8em 4em 0em;
+
+    .container {
+        display: flex;
+        align-items: center !important;
+        justify-content: space-between;
+
+
+        img {
+            max-width: 805px;
+            max-height: 781px;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: 400px;
+            height: auto;
+            vertical-align: middle;
+
+            h1 {
+                display: flex;
+                flex-wrap: nowrap;
+                font-family: 'Inter';
+                font-weight: 400;
+                font-size: 36px;
+            }
+
+            p {
+                margin-bottom: 1em;
+            }
+
+            input {
+                border: none;
+                border-bottom: 1px solid #000000;
+            }
+
+            .custom-input-wrapper {
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                background-color: transparent;
+                margin-bottom: 2em;
+
+                p-message {
+                    padding: 0;
+                    position: absolute;
+                    bottom: -3em; // coloca logo abaixo da borda do input
+                    font-size: 10px;
+                    align-self: center;
+                    opacity: 0;
+                    transform: translateY(-5px);
+                    transition: all 0.25s ease-in-out;
+                }
+
+                p-message.ng-trigger {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .custom-input-wrapper label {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 6px;
+                color: #000000;
+            }
+
+            .custom-input-wrapper input {
+                padding: 12px 14px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s;
+                border-radius: 0;
+            }
+
+            .custom-input-wrapper input:focus {
+                border-bottom: 1px solid #db4444;
+                /* cor vermelha do botão */
+            }
+
+            .submit-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 1em;
+
+                .buttons-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+                    width: 100%;
+
+                    .cadastro-button ::ng-deep .p-button {
+                        padding: 12px 32px;
+                        font-size: 16px;
+                        border-radius: 4px;
+                        margin-right: 20px;
+                        font-family: 'Poppins';
+                        font-weight: 300;
+                        width: 100%;
+
+                        .p-button-label {
+                            font-weight: 400;
+                        }
+                    }
+
+                    .google-button ::ng-deep .p-button {
+                        display: flex;
+                        padding: 12px 32px;
+                        width: 100%;
+                        font-size: 16px;
+                        color: #000000;
+                        font-family: 'Poppins', sans-serif;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px; // espaço entre ícone e texto
+                        border: 1px solid rgba(0, 0, 0, 0.3);
+
+
+                        .p-button-label {
+                            font-weight: 400;
+                        }
+
+                        img.google-icon {
+                            vertical-align: middle;
+                            margin-right: 0.8em;
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+
+
+                }
+
+                .links-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    margin-top: 1em;
+
+                    .link {
+                        text-decoration: none;
+                        list-style: none;
+                        color: #000000;
+                        font-size: 16px;
+                    }
+
+                    .forget-password {
+                        font-size: 16px;
+                        color: #000000;
+                        margin-bottom: 0;
+                        font-family: 'Poppins';
+                        font-weight: 400;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* === Media Queries para Responsividade === */
+
+/* Tablets (telas com largura máxima de 992px) */
+@media screen and (min-width: 1600px) {
+    .cadastro {
+
+
+        .container {
+            display: flex;
+            /* Empilha a imagem e o formulário */
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            gap: 3em;
+            text-align: center;
+            width: 100%;
+
+            img {
+                max-width: 50%;
+                /* Reduz o tamanho da imagem */
+                height: auto;
+                order: 2;
+                /* Coloca a imagem depois do formulário, se preferir */
+            }
+
+            .formulario {
+
+                /* Coloca o formulário antes da imagem */
+                max-width: 500px;
+                height: auto;
+                /* Permite que a altura se ajuste ao conteúdo */
+                margin: 0 auto;
+
+                h1 {
+                    justify-content: center;
+                    /* Centraliza o título */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .cadastro {
+        padding: 2em 3em 3em 0em;
+
+        .container {
+            /* Empilha a imagem e o formulário */
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            gap: 3em;
+            text-align: center;
+            align-items: center;
+
+            img {
+                max-width: 50%;
+                /* Reduz o tamanho da imagem */
+                height: auto;
+                order: 2;
+                /* Coloca a imagem depois do formulário, se preferir */
+            }
+
+            .formulario {
+                /* Coloca o formulário antes da imagem */
+                max-width: 450px;
+                height: auto;
+                /* Permite que a altura se ajuste ao conteúdo */
+
+                h1 {
+                    justify-content: center;
+                    /* Centraliza o título */
+                }
+            }
+        }
+    }
+}
+
+/* Celulares (telas com largura máxima de 576px) */
+@media screen and (max-width: 576px) {
+    .cadastro {
+        padding: 2em 1em;
+        /* Padding mínimo para telas pequenas */
+        margin: 4em 0;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                display: none;
+                /* Oculta a imagem para focar no formulário */
+            }
+
+            .formulario {
+                h1 {
+                    font-size: 28px;
+                    /* Reduz o tamanho da fonte do título */
+                }
+
+                .submit-wrapper {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    /* Empilha o botão e o link */
+                    gap: 1.5em;
+
+                    .cadastro-button ::ng-deep .p-button {
+                        margin-right: 0;
+                    }
+
+                    .google-button ::ng-deep .p-button {
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        gap: 8px !important;
+                    }
+
+                    .google-button ::ng-deep img.google-icon {
+                        display: inline-block !important;
+                        width: 18px;
+                        height: 18px;
+                    }
+
+                }
+            }
+        }
+    }
+}
