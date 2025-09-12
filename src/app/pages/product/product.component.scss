@@ -1,0 +1,144 @@
+// ng-deep is used to apply styles to child components from third-party libraries
+
+:host ::ng-deep {
+  .p-galleria-content {
+    width: 100%;
+    max-width: 700px;
+    gap: 30px;
+  }
+
+  .product__image {
+    max-width: 500px;
+    max-height: 600px;
+  }
+
+  .product__thumbnail {
+    width: 121px;
+    height: 114px;
+  }
+
+  .p-galleria-thumbnail-items {
+    display: flex;
+    gap: 16px;
+  }
+
+  .p-galleria-thumbnail-container {
+    display: flex;
+    gap: 16px;
+    flex-grow: 1;
+    background-color: transparent;
+  }
+  .p-galleria-thumbnail-items-container {
+    height: auto !important;
+  }
+
+  p-galleriaitem {
+    display: flex;
+    align-items: center;
+  }
+
+  .p-galleria-thumbnail-item {
+    display: flex;
+    width: 170px;
+    gap: 16px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    height: 138px;
+    flex: none !important;
+  }
+
+  .p-galleria-thumbnail-wrapper {
+    gap: 16px;
+  }
+
+  .p-galleria-thumbnail-wrapper {
+    height: auto;
+  }
+
+  .product__color-red .p-radiobutton-box {
+    background-color: rgb(224, 117, 117);
+  }
+
+  .product__color-blue .p-radiobutton-box {
+    background-color: rgb(160, 188, 224);
+  }
+
+  .p-highlight {
+    border: 2px solid white;
+    outline: 2px solid black;
+    padding: 2px;
+    transform: scale(0.8);
+  }
+
+  .p-radiobutton-icon {
+    background-color: inherit;
+  }
+}
+
+// component-specific styles
+
+.product__container {
+  display: flex;
+  gap: 70px;
+  padding: 80px 135px;
+  justify-content: space-evenly;
+}
+
+.product__details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+.product__title {
+  font-family: var(--font-primaria);
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.product__reviews {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  .product__stock {
+    display: flex;
+    text-wrap: nowrap;
+    gap: 15px;
+
+    [green] {
+      color: #66ffa3;
+    }
+  }
+}
+
+.product__price {
+  font-weight: 400;
+  font-size: 24px;
+  font-family: var(--font-primaria);
+}
+
+.product__description {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--font-secundaria);
+  text-align: justify;
+}
+
+.divider {
+  border-bottom: 2px solid #000;
+  opacity: 0.5;
+}
+
+.product__form-colors {
+  display: flex;
+  gap: 8px;
+}
+
+.p-radiobutton-box {
+  color: red;
+}
