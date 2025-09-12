@@ -1,0 +1,72 @@
+<div *ngIf="product" class="product__container">
+  <p-galleria [value]="images" [containerStyle]="" [numVisible]="4" [thumbnailsPosition]="'left'">
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.itemImageSrc" class="product__image" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+      <img [src]="item.thumbnailImageSrc" class="product__thumbnail" />
+    </ng-template>
+  </p-galleria>
+  <div class="product__details">
+    <h1 class="product__title">{{ product.title }}</h1>
+    <div class="product__reviews">
+      <app-rating [value]="product.rating.rate" [count]="product.rating.count" [reviews]="true"></app-rating>
+      <div class="product__stock">
+        <p>|</p>
+        <p green>In-Stock</p>
+      </div>
+    </div>
+    <h2 class="product__price">R$ {{ product.price | number : "1.2-2" }}</h2>
+    <h2 class="product__description">{{ product.description }}</h2>
+    <div class="divider"></div>
+    <form [formGroup]="productForm" class="product__form" (ngSubmit)="submitForm()">
+      <div class="product__form-colors">
+        <p>Colours:</p>
+        <p-radioButton [value]="'red'" formControlName="color" class="product__color-red" />
+        <p-radioButton [value]="'blue'" formControlName="color" class="product__color-blue" />
+      </div>
+      <div class="product__form-size">
+        <p>Size:</p>
+        <p-selectButton [options]="sizes" formControlName="size" required="true"></p-selectButton>
+      </div>
+      <div class="product__form-buy">
+        <div class="product__form-quantity">
+          <p-inputNumber
+            formControlName="quantity"
+            [min]="1"
+            [showButtons]="true"
+            [buttonLayout]="'horizontal'"
+            inputId="horizontal"
+            [step]="1"
+            [incrementButtonIcon]="'pi pi-plus'"
+            [decrementButtonIcon]="'pi pi-minus'"
+          />
+        </div>
+        <p-button type="submit" [disabled]="isInvalid(productForm)" severity="danger" raised="true" class="buy-button"
+          >Buy Now</p-button
+        >
+        <span class="pi pi-heart fav-icon"></span>
+      </div>
+      <div class="product__delivery-info">
+        <div class="product__delivery-item product__delivery-item-border">
+          <span class="pi pi-truck delivery-icon"></span>
+          <div class="product__delivery-text">
+            <p>Free Delivery</p>
+            <p class="product__delivery__text-sub">Enter your postal code for Delivery Availability</p>
+          </div>
+        </div>
+        <div class="product__delivery-item">
+          <span class="pi pi-sync delivery-icon"></span>
+          <div class="product__delivery-text">
+            <p>30 Days Return</p>
+            <p>Free 30 Days Delivery Returns. <span class="product__delivery__text-sub">Details</span></p>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div>
+  <app-carrossel></app-carrossel>
+</div>

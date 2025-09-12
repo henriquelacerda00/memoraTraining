@@ -6,3 +6,13 @@
   stroke: gold;
   stroke-width: 1px;
 }
+
+.rating__container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating__count {
+  text-wrap: nowrap;
+}

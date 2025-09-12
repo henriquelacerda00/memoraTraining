@@ -11,13 +11,17 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { DividerModule } from 'primeng/divider';
 import { DropdownModule } from 'primeng/dropdown';
 import { CarouselModule } from 'primeng/carousel';
+import { GalleriaModule } from 'primeng/galleria';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { InputNumberModule } from 'primeng/inputnumber';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 // adicione outros módulos conforme sua necessidade
 
@@ -40,6 +44,10 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     CarouselModule,
     RatingModule,
     TieredMenuModule,
+    GalleriaModule,
+    RadioButtonModule,
+    SelectButtonModule,
+    InputNumberModule,
   ],
 })
 export class PrimengModule {}

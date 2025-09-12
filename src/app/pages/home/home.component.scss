@@ -1,12 +1,9 @@
 .homePage {
   min-height: 50vh;
   padding: 2em 5em;
-
-  
 }
 
 .home__container {
-  height: calc(100vh - 142px);
   display: flex;
   justify-content: center;
 }
@@ -25,9 +22,9 @@
   display: flex;
   justify-content: center;
   padding: 1em 1.5em;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   align-items: center;
   margin: 0 auto;
   font-weight: 300;
-  margin-bottom:4em;
+  margin-bottom: 4em;
 }

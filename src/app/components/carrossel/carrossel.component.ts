@@ -4,6 +4,7 @@ import { ProductService } from '../../pages/home/service/product.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RatingComponent } from '../rating/rating.component';
+import { TruncatePipe } from '../../Pipes/truncate.pipe';
 
 export interface Product {
   id: number;
@@ -22,13 +23,13 @@ export interface Product {
 @Component({
   selector: 'app-carrossel',
   standalone: true,
-  imports: [PrimengModule, CommonModule, FormsModule, RatingComponent],
+  imports: [PrimengModule, CommonModule, FormsModule, RatingComponent, TruncatePipe],
   templateUrl: './carrossel.component.html',
   styleUrl: './carrossel.component.scss',
   host: { ngSkipHydration: 'true' },
 })
 export class CarrosselComponent {
-  @Input()categoria! : string;
+  @Input() categoria!: string;
   products: Product[] | undefined;
 
   rateValue = 4.5;
