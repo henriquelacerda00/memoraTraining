@@ -14,7 +14,7 @@
           <img src="{{ product.image }}" [alt]="product.title" class="w-full border-round" />
         </div>
       </div>
-      <div class="title-container">
+      <div class="title-container" (click)="onProductClick(product)">
         {{ product.title | truncate }}
       </div>
       <div class="actions">

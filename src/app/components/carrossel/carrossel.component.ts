@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RatingComponent } from '../rating/rating.component';
 import { TruncatePipe } from '../../Pipes/truncate.pipe';
+import { Router } from '@angular/router';
 
 export interface Product {
   id: number;
@@ -36,7 +37,7 @@ export class CarrosselComponent {
 
   responsiveOptions: any[] | undefined;
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit() {
     this.productService.listarProdutos().subscribe((products) => {
@@ -60,5 +61,9 @@ export class CarrosselComponent {
         numScroll: 1,
       },
     ];
+  }
+
+  onProductClick(product: Product) {
+    this.router.navigate(['/product', product.id]);
   }
 }
