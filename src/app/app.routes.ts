@@ -20,18 +20,14 @@ export const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: '**',
-    component: NotfoundComponent,
-  },
-  {
-    path: '**',
-    component: NotfoundComponent,
-  },
-  {
     path: 'product/:id',
     component: ProductComponent,
     resolve: {
       product: ProductResolver,
     },
+  },
+  {
+    path: '**',
+    component: NotfoundComponent,
   },
 ];
