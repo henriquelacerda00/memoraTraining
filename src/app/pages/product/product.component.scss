@@ -1,61 +1,6 @@
 // ng-deep is used to apply styles to child components from third-party libraries
 
 :host ::ng-deep {
-  .p-galleria-content {
-    width: 100%;
-    max-width: 700px;
-    gap: 30px;
-  }
-
-  .product__image {
-    max-width: 500px;
-    max-height: 600px;
-  }
-
-  .product__thumbnail {
-    width: 121px;
-    height: 114px;
-  }
-
-  .p-galleria-thumbnail-items {
-    display: flex;
-    gap: 16px;
-  }
-
-  .p-galleria-thumbnail-container {
-    display: flex;
-    gap: 16px;
-    flex-grow: 1;
-    background-color: transparent;
-  }
-  .p-galleria-thumbnail-items-container {
-    height: auto !important;
-  }
-
-  p-galleriaitem {
-    display: flex;
-    align-items: center;
-  }
-
-  .p-galleria-thumbnail-item {
-    display: flex;
-    width: 170px;
-    gap: 16px;
-    overflow: hidden;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    height: 138px;
-    flex: none !important;
-  }
-
-  .p-galleria-thumbnail-wrapper {
-    gap: 16px;
-  }
-
-  .p-galleria-thumbnail-wrapper {
-    height: auto;
-  }
-
   .product__color-red .p-radiobutton-box {
     background-color: rgb(224, 117, 117);
   }

@@ -8,11 +8,20 @@ import { FormBuilder, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Valid
 import { CommonModule } from '@angular/common';
 import { RatingComponent } from '../../components/rating/rating.component';
 import { CarrosselComponent } from '../../components/carrossel/carrossel.component';
+import { GaleriaProductComponent } from './galeria-product/galeria-product.component';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [PrimengModule, FormsModule, CommonModule, RatingComponent, ReactiveFormsModule, CarrosselComponent],
+  imports: [
+    PrimengModule,
+    FormsModule,
+    CommonModule,
+    RatingComponent,
+    ReactiveFormsModule,
+    CarrosselComponent,
+    GaleriaProductComponent,
+  ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.scss',
 })

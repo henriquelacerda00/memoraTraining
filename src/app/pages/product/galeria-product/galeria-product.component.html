@@ -1,0 +1,8 @@
+<p-galleria [value]="images" [containerStyle]="" [numVisible]="4" [thumbnailsPosition]="'left'">
+  <ng-template pTemplate="item" let-item>
+    <img [src]="item.itemImageSrc" class="product__image" />
+  </ng-template>
+  <ng-template pTemplate="thumbnail" let-item>
+    <img [src]="item.thumbnailImageSrc" class="product__thumbnail" />
+  </ng-template>
+</p-galleria>
