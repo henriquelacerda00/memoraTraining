@@ -1,22 +1,21 @@
 <section class="login">
     <div class="container">
         <img src="assets/login.png" alt="">
-        <div class="formulario">
+        <form class="formulario" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <h1>Log in to Exclusive</h1>
             <p>Enter your details below</p>
 
             <div class="custom-input-wrapper">
-                <input id="email" type="text" pInputText placeholder="Email ou Número de Telefone" />
+                <input id="email" type="text" pInputText placeholder="Email ou Número de Telefone" formControlName="email" />
             </div>
 
             <div class="custom-input-wrapper">
-                <input id="password" type="password" pInputText placeholder="Senha" />
+                <input id="password" type="password" pInputText placeholder="Senha" formControlName="password" />
             </div>
             <div class="submit-wrapper">
-                <p-button label="Log In" severity="danger" class="login-button"></p-button>
+                <p-button type="submit" label="Log In" severity="danger" class="login-button"></p-button>
                 <p class="forget-password">Forget password?</p>
             </div>
-        </div>
-
+        </form>
     </div>
 </section>

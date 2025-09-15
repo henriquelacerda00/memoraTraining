@@ -174,7 +174,7 @@
 
 /* === Media Queries para Responsividade === */
 
-/* Tablets (telas com largura máxima de 992px) */
+
 @media screen and (min-width: 1600px) {
     .cadastro {
 
@@ -196,13 +196,12 @@
                 /* Coloca a imagem depois do formulário, se preferir */
             }
 
-            .formulario {
+            .formulario ::ng-deep {
 
                 /* Coloca o formulário antes da imagem */
+                margin: 0 auto;
                 max-width: 500px;
                 height: auto;
-                /* Permite que a altura se ajuste ao conteúdo */
-                margin: 0 auto;
 
                 h1 {
                     justify-content: center;
@@ -215,7 +214,7 @@
 
 @media screen and (max-width: 1300px) {
     .cadastro {
-        padding: 2em 3em 3em 0em;
+        padding: 2em 5em 3em 0em;
 
         .container {
             /* Empilha a imagem e o formulário */
@@ -225,6 +224,7 @@
             gap: 3em;
             text-align: center;
             align-items: center;
+            
 
             img {
                 max-width: 50%;
@@ -235,7 +235,7 @@
             }
 
             .formulario {
-                /* Coloca o formulário antes da imagem */
+                
                 max-width: 450px;
                 height: auto;
                 /* Permite que a altura se ajuste ao conteúdo */
