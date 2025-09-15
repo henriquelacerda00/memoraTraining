@@ -258,14 +258,16 @@
   border-bottom: none;
 }
 
+.fav-icon_container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
 .delivery-icon {
   width: 40px;
   height: 40px;
   padding: 5px;
   font-size: 25px;
-
-  &::before {
-  }
 }
 
 .product__delivery-item {
