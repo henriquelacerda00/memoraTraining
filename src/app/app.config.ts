@@ -8,6 +8,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { AuthInterceptor } from './core/auth.interceptor';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { MessageService } from 'primeng/api';
 
 // Registrar locale brasileiro
 registerLocaleData(localePt, 'pt-BR');
@@ -24,5 +25,7 @@ export const appConfig: ApplicationConfig = {
 
     // Interceptor de autenticação
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-  ],
+
+      MessageService  
+    ],
 };

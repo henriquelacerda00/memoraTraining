@@ -9,5 +9,5 @@ export const DROP_DOWN_ITEMS: IdropDownItems[] = [
     route: '/profile',
   },
   { label: 'My Reviews', icon: 'pi pi-star', route: '' },
-  { label: 'Logout', icon: 'pi pi-sign-out', route: '' },
+  { label: 'Logout', icon: 'pi pi-sign-out', route: '/login', isLogout : true },
 ];

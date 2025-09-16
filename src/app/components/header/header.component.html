@@ -29,7 +29,9 @@
         <i class="pi pi-search"></i>
       </span>
     </div>
-    <app-drop-down></app-drop-down>
+    @if(estaLogado()){
+      <app-drop-down></app-drop-down>
+    }
   </p-toolbar>
   <p-divider />
 </div>

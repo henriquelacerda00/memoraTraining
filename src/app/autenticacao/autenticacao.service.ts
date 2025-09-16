@@ -16,7 +16,7 @@ interface AuthResponse {
 export class AuthService {
   private apiUrl = environment.render;
 
-  constructor(private http: HttpClient, private tokenService: TokenService) {}
+  constructor(private http: HttpClient, private tokenService: TokenService) { }
 
   cadastrar(pessoaUsuaria: User): Observable<User> {
     return this.http.post<AuthResponse>(`${this.apiUrl}/auth/register`, pessoaUsuaria)
@@ -31,14 +31,16 @@ export class AuthService {
   login(email: string, senha: string): Observable<User> {
     return this.http.post<AuthResponse>(`${this.apiUrl}/auth/login`, { email, senha })
       .pipe(
-        map(res => {
-          this.tokenService.salvarToken(res.token); // salva o token
+        map((res: any) => { // usar any ou criar interface correta
+          const token = `${res.tokenType} ${res.accessToken}`;
+          this.tokenService.salvarToken(token); // salva o token no formato "Bearer ..."
           return res.user;
         })
       );
   }
 
   logout(): void {
-    this.tokenService.removerToken();
-  }
+  this.tokenService.removerToken(); // remove token do localStorage
+  console.log('Logout: token removido', localStorage.getItem('token')); // deve ser null
+}
 }
