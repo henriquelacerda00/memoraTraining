@@ -7,19 +7,23 @@ const KEY = 'token';
 })
 export class TokenService {
 
-  salvarToken(token : string){
+  salvarToken(token: string) {
     return localStorage.setItem(KEY, token);
   }
-  
-  removerToken(){
+
+  removerToken() {
     return localStorage.removeItem(KEY);
   }
 
-  getToken(){
-    return localStorage.getItem(KEY) ?? '';
+  getToken(): string | null {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      return localStorage.getItem('token');
+    }
+
+    return null;
   }
 
-  possuiToken(){
+  possuiToken() {
     return !!this.getToken();
   }
 }
