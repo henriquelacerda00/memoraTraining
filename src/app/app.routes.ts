@@ -6,7 +6,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductResolver } from './pages/product/resolver/product.resolver';
-import { authGuard } from './autenticacao/token/auth.guard';
+import { authGuard, RedirectGuard,  } from './autenticacao/token/auth.guard';
 
 
 export const routes: Routes = [
@@ -22,6 +22,7 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+    canActivate: [RedirectGuard]
   },
   {
     path: 'perfil',
@@ -31,6 +32,7 @@ export const routes: Routes = [
   {
     path: 'cadastro',
     component: CadastroComponent,
+    canActivate: [RedirectGuard]
   },
   {
     path: '',

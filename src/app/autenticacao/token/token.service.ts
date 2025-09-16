@@ -19,11 +19,11 @@ export class TokenService {
     if (typeof window !== 'undefined' && window.localStorage) {
       return localStorage.getItem('token');
     }
-
     return null;
   }
 
   possuiToken() {
     return !!this.getToken();
   }
+
 }

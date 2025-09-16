@@ -14,3 +14,18 @@ export const authGuard: CanActivateFn = (route, state) => {
   router.navigate(['/login']);
   return false;
 };
+
+
+export const RedirectGuard: CanActivateFn = (route, state) => {
+  const tokenService = inject(TokenService);
+  const router = inject(Router);
+
+  if (tokenService.possuiToken()) {
+    // Se já está logado, redireciona para outra rota
+    router.navigate(['/perfil']); // ou '/home', etc.
+    return false;
+  }
+
+  // Se não está logado, pode acessar o login
+  return true;
+};
