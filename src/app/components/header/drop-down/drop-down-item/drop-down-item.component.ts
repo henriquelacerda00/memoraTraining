@@ -23,10 +23,10 @@ export class DropDownItemComponent {
     this.itemClicked.emit();
 
     if (this.isLogout === true) {
-  this.logout();
-} else {
-  this.router.navigate([this.item.route]);
-}
+      this.logout();
+    } else {
+      this.router.navigate([this.item.route]);
+    }
 
   };
 
