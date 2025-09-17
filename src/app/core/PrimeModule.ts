@@ -25,6 +25,8 @@ import { MessageModule } from 'primeng/message';
 
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { BadgeModule } from 'primeng/badge';
+
 
 
 // adicione outros módulos conforme sua necessidade
@@ -53,6 +55,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     RadioButtonModule,
     SelectButtonModule,
     InputNumberModule,
+    BadgeModule,
   ],
 })
 export class PrimengModule {}

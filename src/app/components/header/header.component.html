@@ -3,15 +3,12 @@
   <a href="">Shop Now</a>
 </div>
 <div class="card">
-  <p-toolbar
-    class="custom-toolbar"
-    [style]="{
+  <p-toolbar class="custom-toolbar" [style]="{
       background: 'none',
       border: 'none',
       height: '80px',
       padding: '0 10vw'
-    }"
-  >
+    }">
     <div class="p-toolbar-group-start">
       <h1>Exclusive</h1>
     </div>
@@ -30,7 +27,11 @@
       </span>
     </div>
     @if(estaLogado()){
+    <div class="icons-container">
+      <i class="pi pi-heart" pBadge severity="danger" value="2"></i>
+      <i class="pi pi-shopping-cart" pBadge severity="danger" value="2"></i>
       <app-drop-down></app-drop-down>
+    </div>
     }
   </p-toolbar>
   <p-divider />

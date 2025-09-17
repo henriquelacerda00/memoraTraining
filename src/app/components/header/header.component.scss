@@ -1,4 +1,4 @@
-.top{
+.top {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,10 +9,11 @@
     font-size: 12px;
     font-family: 'Poppins';
     margin-bottom: 1em;
-    a{
+
+    a {
         color: white;
     }
-    
+
 }
 
 .card {
@@ -42,7 +43,7 @@
                 position: relative;
                 display: flex;
                 align-items: center;
-                
+
                 i.pi {
                     position: relative;
                     top: 50%;
@@ -60,6 +61,29 @@
                     padding-right: 3rem;
                 }
             }
+        }
+    }
+
+    .icons-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 150px;
+
+        ::ng-deep .pi-heart:before,
+        ::ng-deep.pi-shopping-cart:before {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        ::ng-deep .p-badge {
+            align-items: center;
+            justify-content: center;
+            font-size: 10px; // diminui o texto
+            min-width: 16px; // largura mínima da bolinha
+            height: 16px; // altura da bolinha
+            line-height: 16px; // centraliza o número dentro
+            padding: 0; // remove espaçamento extra
         }
     }
 }
@@ -115,8 +139,8 @@
         justify-content: center;
         margin-bottom: 3em;
 
-        h1{
-            margin:  0 auto;
+        h1 {
+            margin: 0 auto;
         }
 
         .p-toolbar-group-center {
@@ -133,7 +157,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 1em;
-            
+
             .p-input-icon-right {
                 .pesquisa {
                     // Reduz o tamanho do campo de pesquisa
